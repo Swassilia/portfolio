@@ -3,8 +3,8 @@ import { k } from "./kaboomCtx";
 import { displayDialogue, setCamScale } from "./utils";
 
 k.loadSprite("spritesheet", "./spritesheet.png",{
-  sliceX: 39,
-  sliceY: 31,
+  sliceX: 15,
+  sliceY: 2,
   anims: {
     "idle-down": 0,
     "walk-down": { from: 0, to: 3, loop: true, speed: 8 },
@@ -34,7 +34,7 @@ k.scene("main", async () => {
     }),
     k.body(),
     k.anchor("center"),
-    k.pos(),
+    k.pos(0),
     k.scale(scaleF),
     //par defaut
     {
@@ -52,7 +52,7 @@ k.scene("main", async () => {
           k.area({
             shape: new k.Rect(k.vec2(0), boundary.width, boundary.height),
           }), 
-          k.body({isStaticc: true}), 
+          k.body({isStatic: true}), 
           k.pos(boundary.x, boundary.y),
           boundary.name,
         ]);
