@@ -1,32 +1,22 @@
-# 📁 Node modules
+
 node_modules/
 
-# 🧪 Logs & debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# ⚙️ Vite build
 dist/
 
-# 🗑️ Systèmes d'exploitation
-.DS_Store         # macOS
-Thumbs.db         # Windows
+Thumbs.db  
 
-# 🛠️ IDE / éditeurs
 .vscode/
-.idea/
 
-# 📦 Env fichiers (ne jamais push tes secrets)
 .env
 .env.*.local
 
-# 📑 Cache
 .cache/
 .vite/
 
-# 🔐 Lockfiles (selon ton gestionnaire de paquets, un seul)
+
 package-lock.json
-# yarn.lock
-# pnpm-lock.yaml

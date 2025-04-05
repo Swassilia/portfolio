@@ -1,37 +1,70 @@
-export function displayDialogue(text, onDisplayEnd){
-    const dialogueUI=document.getElementById("textbox-container");
-    const dialogue =document.getElementById("dialogue");
+export function displayDialogue(text, onDisplayEnd) {
+    const dialogueUI = document.getElementById("textbox-container");
+    const dialogue = document.getElementById("dialogue");
 
-    dialogueUI.style.display="block";
+    const textSound = new Audio("./click.wav"); 
+    textSound.volume = 0.2;
 
-    //text scrolling
-    let index=0;
-    let currenText="";
-    const intervalRef=setInterval(()=>{
-        if (index<text.length){
-            currenText+=text[index];
-            dialogue.innerHTML=currenText;
-            index++;
+    dialogueUI.style.display = "block";
+
+    const messages = Array.isArray(text) ? text : [text];
+    let currentMessageIndex = 0;
+    let index = 0;
+    let currenText = "";
+    let intervalRef = null;
+
+    function startTyping(message) {
+        currenText = "";
+        index = 0;
+        dialogue.innerHTML = "";
+
+        intervalRef = setInterval(() => {
+            if (index < message.length) {
+                currenText += message[index];
+                dialogue.innerHTML = currenText;
+            
+                if (textSound.paused) {
+                    
+                    textSound.currentTime = 0;
+                    textSound.play().catch(() => {});
+                }
+                index++;
+                return;
+            }
+            clearInterval(intervalRef);
+            textSound.pause();
+            textSound.currentTime = 0;
+        }, 5);
+    }
+    const closeBTN = document.getElementById("close");
+    function onCloseBtnClick() {
+        if (intervalRef) clearInterval(intervalRef);
+
+        if (index < messages[currentMessageIndex].length) {
+            dialogue.innerHTML = messages[currentMessageIndex];
+            index = messages[currentMessageIndex].length;
             return;
         }
-        clearInterval(intervalRef);
-    }
-    , 5);
 
-    const closeBTN= document.getElementById("close");
-    function onCloseBtnClick(){
-        onDisplayEnd();
-        dialogueUI.style.display="none";
-        dialogue.innerHTML="";
-        clearInterval(intervalRef);
-        closeBTN.removeEventListener("click", onCloseBtnClick);
+        currentMessageIndex++;
+
+        if (currentMessageIndex < messages.length) {
+            startTyping(messages[currentMessageIndex]);
+        } else {
+            dialogueUI.style.display = "none";
+            dialogue.innerHTML = "";
+            closeBTN.removeEventListener("click", onCloseBtnClick);
+            if (onDisplayEnd) onDisplayEnd();
+        }
     }
+
     closeBTN.addEventListener("click", onCloseBtnClick);
+    startTyping(messages[currentMessageIndex]);
 }
 
-export function setCamScale(k){
-    const resizeFactor=k.width()/k.height();
-    if (resizeFactor<1){
+export function setCamScale(k) {
+    const resizeFactor = k.width() / k.height();
+    if (resizeFactor < 1) {
         k.camScale(k.vec2(1));
         return;
     }
