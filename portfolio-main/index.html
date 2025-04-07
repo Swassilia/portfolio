@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css">
+    <title>Portfolio JV Wassila SAID KARIM</title>
+    <script>
+      // Script pour définir dynamiquement la base URL pour les ressources
+      // Important pour GitHub Pages
+      (function() {
+        const baseUrl = document.createElement('base');
+        // Si en développement local, utilisez '/'
+        // Sinon, utilisez le nom de votre dépôt GitHub
+        baseUrl.href = location.hostname === 'localhost' || location.hostname === '127.0.0.1' 
+          ? '/' 
+          : '/portfolio-main/';
+        document.head.appendChild(baseUrl);
+        
+        // Définir une variable CSS pour la base URL (pour les polices, etc.)
+        document.documentElement.style.setProperty('--base-url', `"${baseUrl.href}"`);
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="app">
+      <div id="ui">
+        <p class="note">Contrôler avec la souris</p>
+        <div id="textbox-container" style="display: none">
+          <div id="textbox">
+            <p id="dialogue" class="ui-text" ></p>
+            <div class="buttonC">
+              <button id="close" class="ui-close-btn">Suivant</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <canvas id="game">
+      </canvas>
+    </div>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
