@@ -19,7 +19,7 @@ export const dialoguedata = {
     `Je considère ces projets comme étant une source d'apprentissage de concepts que je réutilise en animation ou programmation.`,
     `N'hésitez pas à être curieux vous aussi : peut-être que certains objets peuvent vous surprendre.`
   ],
-  Tetris: [
+  Tetris:[
     `Je vois que vous appréciez les jeux. Ici, vous avez le jeu <a href="https://github.com/Swassilia/Tetris_Java">Tetris fait en Java</a>.`,
     `Vous pouvez y jouer, mais ne devenez pas accro !`
   ],
