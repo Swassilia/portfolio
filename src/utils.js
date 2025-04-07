@@ -1,8 +1,14 @@
+// Fonction pour obtenir le chemin correct des ressources
+function getAssetPath(path) {
+    // Ajoutez le préfixe du dépôt GitHub
+    return `${import.meta.env.BASE_URL}${path}`;
+}
+
 export function displayDialogue(text, onDisplayEnd) {
     const dialogueUI = document.getElementById("textbox-container");
     const dialogue = document.getElementById("dialogue");
 
-    const textSound = new Audio("./click.wav"); 
+    const textSound = new Audio(getAssetPath("click.wav")); 
     textSound.volume = 0.2;
 
     dialogueUI.style.display = "block";
@@ -24,7 +30,6 @@ export function displayDialogue(text, onDisplayEnd) {
                 dialogue.innerHTML = currenText;
             
                 if (textSound.paused) {
-                    
                     textSound.currentTime = 0;
                     textSound.play().catch(() => {});
                 }

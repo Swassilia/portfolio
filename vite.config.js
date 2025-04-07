@@ -2,7 +2,7 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
     // Remplacez "portfolio-main" par le nom de votre dépôt GitHub
-    base: "/portfolio-main/",
+    base: "/portfolio/",
     build: {
         minify: "terser",
         assetsInlineLimit: 0,

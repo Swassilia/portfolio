@@ -1,7 +1,7 @@
 @font-face {
   font-family: monogram;
   /* Utilisez var(--base-url) qui sera défini dynamiquement */
-  src: url('monogram.ttf');
+  src: url('./public/monogram.ttf');
   font-display: swap;
 }
 

@@ -1,8 +1,14 @@
-import { scaleF , dialoguedata} from "./constants";
-import { k } from "./kaboomCtx";
-import { displayDialogue, setCamScale } from "./utils";
+import { scaleF, dialoguedata } from "./constants.js";
+import { k } from "./kaboomCtx.js";
+import { displayDialogue, setCamScale } from "./utils.js";
 
-k.loadSprite("spritesheet", "./spritesheet.png",{
+// Fonction pour obtenir le chemin correct des ressources
+function getAssetPath(path) {
+  // Ajoutez le préfixe du dépôt GitHub
+  return `${import.meta.env.BASE_URL}${path}`;
+}
+
+k.loadSprite("spritesheet", getAssetPath("spritesheet.png"), {
   sliceX: 15,
   sliceY: 2,
   anims: {
@@ -12,14 +18,13 @@ k.loadSprite("spritesheet", "./spritesheet.png",{
     "walk-side": { from: 4, to: 7, loop: true, speed: 8 },
     "idle-up": 12,
     "walk-up": { from: 12, to: 15, loop: true, speed: 8 },
-
   },
 });
-k.loadSprite("map", "./map.png");
+k.loadSprite("map", getAssetPath("map.png"));
 k.setBackground(k.Color.fromHex("#a877ae"));
 k.scene("main", async () => {
-  const madDat = await (await fetch("./map.json")).json();
-  const layers = madDat.layers;
+  const mapData = await (await fetch(getAssetPath("map.json"))).json();
+  const layers = mapData.layers;
   //on recupere le sprite qui s'appelle map et le scale par la constante dans .j
   const map = k.add([
     k.sprite("map"),
