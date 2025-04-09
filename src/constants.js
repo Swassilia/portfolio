@@ -7,7 +7,9 @@ function img(path) {
 }
 
 export const dialoguedata = {
-  credit: `Ce portfolio a été réalisé avec le tuto de ... \nCertains des sprites viennent de ... et ...`,
+  credit: `Ce portfolio a été réalisé avec le tuto de <a href="https://youtu.be/wy_fSStEgMs?si=1EJ-L6Fs_1Fbw7VN">jslegenddev</a>.<br>
+  Certains sprite viennent également de son dossier. D'autres comme le lac, les fleurs et la cloison proviennent de <a href="https://www.kenney.nl/">Kenney</a> l'asset etant <a href="https://www.kenney.nl/assets/tiny-town">Tiny town</a>.<br>
+  Seul le personnage du Voyageur m'appartient il a été réalisé avec<a href="https://www.kenney.nl/">Kenney</a>.`,
   Revenez: `Merci de votre visite à mon domaine, voyageur. J'espère que votre passage était agréable, et que je vous reverrai.`,
   Avenir: `N'allez pas trop loin, mon domaine est encore en construction. Plein de projets sont à venir.`,
   Dehors: `Un paysage fort agréable, vous ne trouvez pas ?<img src="${img('ciel.jpg')}" alt="Dessin" style=all:unset;width:300px;/>`,
@@ -17,7 +19,7 @@ export const dialoguedata = {
   Canette: `Une soif ? Malheureusement, mon distributeur est en panne. Le magicien du village est parti en voyage d'affaires.<img src="${img('distributeur.jpg')}" alt="Distributeur 3D render 2D fait en blender" style=all:unset;width:300px;/>`,
   Watergirl: `Un peu de chaleur de l'enfance ? En deuxième année de licence, j'ai pu développer avec mon groupe le jeu de notre enfance : <a href="https://github.com/Swassilia/WatergirlAndFireboy">Watergirl and Fireboy</a>. Il a été fait en C++ avec la bibliothèque SDL pour l'affichage.`,
   contrat: `Vous avez trouvé mon CV ! Par excès de bonté, je vous donne également mon <a href="https://www.linkedin.com/in/wassilaskarim/">LinkedIn</a>.`,
-  Moi: [
+  Moi:[
     `Bonjour voyageur ! Je me nomme Wassila SAID KARIM. Bienvenue dans mon domaine.`,
     `Je suis actuellement en première année de Master Informatique à l'Université Claude Bernard Lyon 1.`,
     `Comme vous allez pouvoir le constater, je m'intéresse à tout ce qui pourrait s'apparenter de près ou de loin à la création.`,
