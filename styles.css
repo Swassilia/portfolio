@@ -1,7 +1,7 @@
 @font-face {
   font-family: PressStart2P;
   /* Utilisez var(--base-url) qui sera défini dynamiquement */
-  src: url('./PressStart2P.ttf');
+  src: url('./public/PressStart2P.ttf');
   font-display: swap;
 }
 
