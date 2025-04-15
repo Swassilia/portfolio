@@ -32,6 +32,8 @@ export const dialoguedata = {
     `Vous pouvez y jouer, mais ne devenez pas accro !`
   ],
   Bibliotheque: `Un peu de lecture ? J'ai réalisé une petite boîte miniature qui met en scène une bibliothèque au coin du feu.<img src="${img('bibliotheque.jpg')}" alt="Bibliothèque miniature" style=all:unset;width:300px;/>  `,
-  Becomtech: `Becomtech ?`,
-  Contrat: `?`,
+  Becomtech:[ `Très beau diplome hein? Lors de mon année de 3ieme aub collège j'ai participé a un programme appelé jump in tech qui est organisé par l'association Becomtech qui œuvre à la mixité dans l’informatique
+et le numérique.`, `Depuis la fin du programme je suis devenue ambassadrice et j'interviens parfois dans des écoles et dans des tables rondes pour partager mon experience.`],
+  Contrat: [`Ils ne sont pas encore accrochés car ce n'est pas terminé! A gauche c'est mon diplôme de fin de licence, j'ai fait mes 3ans a l'université Claude Bernard Lyon 1`,
+    `A droite vous avez celui de Master 1 toujours a l'université Claude Bernard Lyon 1. Durant toutes mes années j'ai suivis un parcourt qui me dirige vers l'imagerie et l'animation.`],
 };

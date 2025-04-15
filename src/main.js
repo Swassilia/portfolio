@@ -21,7 +21,7 @@ k.loadSprite("spritesheet", getAssetPath("spritesheet.png"), {
   },
 });
 k.loadSprite("map", getAssetPath("map.png"));
-k.setBackground(k.Color.fromHex("#a877ae"));
+k.setBackground(k.Color.fromHex("#663f76"));
 
 k.scene("main", async () => {
   const mapData = await (await fetch(getAssetPath("map.json"))).json();
