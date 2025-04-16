@@ -1,9 +1,5 @@
 # 🗺️ Portfolio 2D Interactif
 
-Excellent ! Voici une proposition d’intro, façon petit dialogue d’accueil immersif, que tu pourrais afficher quand le joueur entre dans ton portfolio-jeu — par exemple dans une boîte de dialogue avec un personnage type “gardien” ou “guide” :  
-
----
-
 🐈 **Gardien du Domaine** :  
 >Bienvenue, voyageur.  
 > Ma propriétaire vient tout juste d'acquérir ce domaine.  
@@ -31,10 +27,34 @@ Vous êtes libre de vos mouvements, invité à découvrir :
 ---
 
 ## ⚙️ Technologies  
-- 💻 **Langages** : JavaScript, HTML, CSS  
+- 💻 **Langages** : JavaScript(Vanilla), HTML, CSS  
 - 🎨 **Design & Graphismes** : Pixel Art, avec des ressources inspirées et en partie issues de **JsLegendDev**.  
 - 🗺️ **Autres outils** : Tiled (utilisé pour la création de la carte et l’agencement des zones).
 
+---
+
+## 💾 Installation
+
+Pour explorer ce domaine sur votre propre machine, suivez ces étapes simples :  
+
+1. Clonez le dépôt depuis GitHub :  
+```bash
+git clone https://github.com/Swassilia/portfolio.git
+```
+
+2. Ouvrez le dossier du projet :  
+```bash
+cd portfolio
+```
+
+3. Comme le projet utilise **Vanilla JavaScript**, il n’a pas besoin de compilation ni de dépendances complexes.  
+Il vous suffit d’ouvrir le fichier `index.html` dans votre navigateur préféré :  
+- Double-cliquez sur `index.html`  
+**ou**  
+- Servez-le localement avec une extension type Live Server (VSCode) ou via une commande comme :
+```bash
+npm run dev
+````
 ---
 
 ## 🌐 Accès en ligne  
