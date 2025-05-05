@@ -7,12 +7,13 @@ function getAssetPath(path) {
 export function displayDialogue(text, onDisplayEnd) {
     const dialogueUI = document.getElementById("textbox-container");
     const dialogue = document.getElementById("dialogue");
+    const SoundBtn= document.getElementById("sound");
 
     const textSound = new Audio(getAssetPath("click.wav")); 
-    textSound.volume = 0.2;
-
+    textSound.volume = 0.01;
+    let SonOn=true;
+   
     dialogueUI.style.display = "block";
-
     const messages = Array.isArray(text) ? text : [text];
     let currentMessageIndex = 0;
     let index = 0;

@@ -52,15 +52,31 @@ a{
   font-size: inherit;
 }
 
+.ui-sound-btn{
+  font-family: inherit;
+  position: absolute;
+  border-style: none;
+  border: radius 3px;
+  padding: 1rem;
+  font-size: inherit;
+
+}
+
 .buttonC {
   align-self: flex-end;
   margin-top: 1rem;
 }
 
+.buttonS {
+  position: fixed;
+  bottom:2%;
+  right: 4%;
+}
+
 .note {
-  position: absolute;
-  left: 5%;
-  top: 1vh;
+  position: fixed;
+  bottom:0%;
+  right: 6%;
   display: flex;
   flex-direction: column;
   color: rgb(0, 0, 0);
